@@ -1,0 +1,25 @@
+{
+  "name": "@krenora/worker",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@krenora/database": "0.1.0",
+    "@krenora/crawler": "0.1.0",
+    "@krenora/discovery": "0.1.0",
+    "@krenora/lead-engine": "0.1.0",
+    "@krenora/sources": "0.1.0",
+    "@krenora/shared": "0.1.0",
+    "@krenora/verticals": "0.1.0",
+    "@supabase/supabase-js": "latest",
+    "dotenv": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}

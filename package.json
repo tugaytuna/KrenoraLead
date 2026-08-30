@@ -1,0 +1,20 @@
+{
+  "name": "krenora-lead-platform",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@krenora/web",
+    "dev:worker": "npm run dev --workspace=@krenora/worker",
+    "build": "npm run build --workspace=@krenora/web",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

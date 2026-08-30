@@ -1,0 +1,9 @@
+node_modules
+apps/web/.next
+**/*.tsbuildinfo
+.env
+.env.*
+.git
+.DS_Store
+lead-intelligence-codex-docs
+stitch_krenora_lead_panel

@@ -1,0 +1,11 @@
+import { Activity, CheckCircle2, Clock3, Globe2 } from "lucide-react";
+import { PageHeader } from "@/components/page-header";
+import { Card } from "@/components/ui/card";
+import { discoveryJobs } from "@/lib/mock-data";
+
+export const metadata = { title: "Taramalar" };
+
+export default function ScansPage() { return <div className="animate-enter space-y-6"><PageHeader title="İşler ve taramalar" description="Keşif, website analizi ve skor hesaplama işlerinin ilerlemesini izleyin."/><div className="grid gap-4 sm:grid-cols-3"><Summary icon={Activity} label="Çalışan işler" value="4"/><Summary icon={CheckCircle2} label="Bugün tamamlanan" value="38"/><Summary icon={Clock3} label="Ort. tarama süresi" value="1dk 42sn"/></div><Card className="overflow-hidden"><div className="border-b border-slate-200 p-5"><h2 className="text-lg font-semibold">İş kuyruğu</h2></div><div className="divide-y divide-slate-200">{discoveryJobs.map((job) => <div key={job.id} className="grid gap-4 p-5 md:grid-cols-[1fr_160px_100px] md:items-center"><div className="flex gap-3"><div className="grid size-10 shrink-0 place-items-center rounded-lg bg-slate-100"><Globe2 className="size-5 text-blue-700"/></div><div><p className="text-sm font-semibold">{job.title}</p><p className="mt-1 text-xs text-slate-500">{job.location}</p></div></div><div><div className="flex justify-between text-[11px] text-slate-500"><span>İlerleme</span><span className="mono-data">{job.progress}%</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-100"><div className={`h-full rounded-full ${job.status === "running" ? "bg-amber-500" : "bg-emerald-500"}`} style={{width:`${job.progress}%`}}/></div></div><span className={`data-label w-fit rounded px-2 py-1 ${job.status === "running" ? "bg-amber-100 text-amber-700" : "bg-emerald-100 text-emerald-700"}`}>{job.status === "running" ? "Çalışıyor" : "Tamamlandı"}</span></div>)}</div></Card></div>; }
+
+function Summary({ icon: Icon, label, value }: { icon: typeof Activity; label: string; value: string }) { return <Card className="flex items-center gap-4 p-5"><span className="grid size-11 place-items-center rounded-lg bg-blue-50 text-blue-700"><Icon className="size-5"/></span><div><p className="data-label text-slate-500">{label}</p><p className="mono-data mt-1 text-xl font-bold">{value}</p></div></Card>; }
+

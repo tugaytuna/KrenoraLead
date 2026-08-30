@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
+@theme inline {
+  --font-sans: "Inter Variable", Inter, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  --color-background: #f7f9fb;
+  --color-brand: #0058be;
+  --color-brand-strong: #2170e4;
+  --color-navy: #131b2e;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+}
+
+:root {
+  --background: #f7f9fb;
+  --card: #ffffff;
+  --border-subtle: #e2e8f0;
+  --text-muted: #64748b;
+}
+
+* { border-color: var(--border-subtle); }
+html { background: var(--background); }
+body { margin: 0; min-width: 320px; background: var(--background); }
+button, input, select, textarea { font: inherit; }
+::selection { background: #d8e2ff; color: #001a42; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-enter { animation: fade-up 280ms ease-out both; }
+.data-label { font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.mono-data { font-family: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }

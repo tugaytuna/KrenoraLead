@@ -1,0 +1,21 @@
+{
+  "name": "@krenora/lead-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@krenora/shared": "0.1.0"
+  },
+  "scripts": {
+    "test": "tsx --test test/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}

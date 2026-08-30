@@ -1,0 +1,20 @@
+{
+  "name": "@krenora/database",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@krenora/shared": "0.1.0",
+    "@krenora/scoring": "0.1.0",
+    "@supabase/supabase-js": "latest"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
