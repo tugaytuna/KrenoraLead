@@ -170,6 +170,10 @@ Detailed plan: [MODULAR_SAAS_ARCHITECTURE.md](./MODULAR_SAAS_ARCHITECTURE.md).
 
 # PHASE 3 — Normalization & Duplicate Resolution
 
+Status:
+
+Core and persistence slices implemented on 2 September 2026. Provider-independent normalization and entity-match evaluation live in `packages/lead-engine`; the workspace-scoped Supabase repository, atomic resolution RPCs, persisted review queue and worker ingestion integration are implemented. Tests cover strong matches, review cases, ambiguous candidates, provider-ID conflicts and the rule that a name alone must never trigger an automatic merge. Applying the migration to the target Supabase project and building the review-queue UI remain pending.
+
 Goal:
 
 Prevent duplicate organizations.

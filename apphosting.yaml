@@ -5,5 +5,17 @@ runConfig:
   cpu: 1
   memoryMiB: 512
 
+env:
+  - variable: NEXT_PUBLIC_SUPABASE_URL
+    value: https://nxtopskhexqatxnuwmow.supabase.co
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+    value: sb_publishable_00MVqSF2GzrATZNABRG4Aw_Xw2Hvekh
+    availability:
+      - BUILD
+      - RUNTIME
+
 # Environment values are configured in App Hosting or Secret Manager.
 # Keep service credentials out of NEXT_PUBLIC_ variables.

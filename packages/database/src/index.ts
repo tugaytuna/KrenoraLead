@@ -2,6 +2,10 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import type { DiscoverySearchParams, RawLead, WorkspaceContext } from "@krenora/shared";
 import { calculateOpportunityScore, type ScoringProfile } from "@krenora/scoring";
 
+export * from "./entity-resolution-ingestion";
+export * from "./entity-resolution-service";
+export * from "./supabase-entity-resolution-repository";
+
 export interface SearchJobRow {
   id: string;
   user_id: string;
@@ -281,6 +285,7 @@ export async function failSearchJob(
   if (error) throw new Error(`Keşif işi hata durumu yazılamadı: ${error.message}`);
 }
 
+/** @deprecated Worker flows should use ingestDiscoveredLeadsWithResolution. */
 export async function ingestDiscoveredLeads(
   client: SupabaseClient,
   context: WorkspaceContext,

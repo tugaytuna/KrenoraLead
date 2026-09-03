@@ -2,7 +2,7 @@ import {
   claimNextSearchJob,
   completeSearchJob,
   failSearchJob,
-  ingestDiscoveredLeads,
+  ingestDiscoveredLeadsWithResolution,
   reserveWorkspaceUsage,
   settleWorkspaceUsage,
   enrichAndScoreOrganizations,
@@ -23,7 +23,7 @@ const orchestrator = new DiscoveryOrchestrator({
   sources: new SourceRegistry([new GooglePlacesSource(dependencies.googlePlacesApiKey)]),
   normalize: normalizeRawLead,
   repository: {
-    ingest: (context, leads) => ingestDiscoveredLeads(dependencies.supabase, context, leads),
+    ingest: (context, leads) => ingestDiscoveredLeadsWithResolution(dependencies.supabase, context, leads),
     enrichAndScore: (context, leads, _policy, profile) => enrichAndScoreOrganizations(
       dependencies.supabase,
       context,

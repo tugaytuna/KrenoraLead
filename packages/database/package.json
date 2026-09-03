@@ -7,14 +7,18 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@krenora/lead-engine": "0.1.0",
     "@krenora/shared": "0.1.0",
     "@krenora/scoring": "0.1.0",
     "@supabase/supabase-js": "latest"
   },
   "scripts": {
+    "test": "tsx --test test/**/*.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
     "typescript": "latest"
   }
 }

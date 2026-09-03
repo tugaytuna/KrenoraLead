@@ -56,7 +56,7 @@ npm run dev
 npm run dev:worker
 ```
 
-Google Places `place_id` değeri temel eşleştirme anahtarıdır; yalnızca işletme adına bakarak otomatik birleştirme yapılmaz. Kuyruk sahiplenme işlemi veritabanında atomiktir ve geçici API hataları en fazla üç denemeyle yeniden planlanır.
+Google Places `place_id` en güçlü provider kimliğidir. Entity resolution ayrıca normalize domain ve telefonu güçlü sinyal; e-posta, ad+adres ve ad+konumu kontrollü sinyal olarak değerlendirir. Yalnızca işletme adına bakarak otomatik birleştirme yapılmaz; belirsiz eşleşmeler inceleme kuyruğuna yazılır. Kuyruk sahiplenme ve eşleştirme uygulama işlemleri veritabanında atomiktir; geçici API hataları en fazla üç denemeyle yeniden planlanır.
 
 Migration'ı Supabase CLI ile uygulamak için:
 

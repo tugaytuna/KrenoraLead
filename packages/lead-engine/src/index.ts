@@ -45,3 +45,5 @@ export function normalizeRawLead(lead: RawLead): CanonicalLeadInput {
     normalizedPhone: normalizePhone(lead.phone),
   };
 }
+
+export * from "./entity-resolution";

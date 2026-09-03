@@ -1,4 +1,11 @@
 {
   "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@krenora/lead-engine": ["../lead-engine/src/index.ts"],
+      "@krenora/shared": ["../shared/src/index.ts"],
+      "@krenora/scoring": ["../scoring/src/index.ts"]
+    }
+  },
   "include": ["src/**/*.ts"]
 }

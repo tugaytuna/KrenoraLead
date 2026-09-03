@@ -2,7 +2,17 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@krenora/database": ["../../packages/database/src/index.ts"],
+      "@krenora/crawler": ["../../packages/crawler/src/index.ts"],
+      "@krenora/discovery": ["../../packages/discovery/src/index.ts"],
+      "@krenora/lead-engine": ["../../packages/lead-engine/src/index.ts"],
+      "@krenora/scoring": ["../../packages/scoring/src/index.ts"],
+      "@krenora/sources": ["../../packages/sources/src/index.ts"],
+      "@krenora/shared": ["../../packages/shared/src/index.ts"],
+      "@krenora/verticals": ["../../packages/verticals/src/index.ts"]
+    }
   },
   "include": ["src/**/*.ts"]
 }
