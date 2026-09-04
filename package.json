@@ -16,5 +16,9 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "devDependencies": {
+    "turbo": "^2.10.12"
+  },
+  "packageManager": "npm@10.9.0"
 }
