@@ -17,5 +17,11 @@ env:
       - BUILD
       - RUNTIME
 
+  - variable: NEXT_PUBLIC_APP_URL
+    value: https://krenora-lead-web--krenora-lead.europe-west4.hosted.app
+    availability:
+      - BUILD
+      - RUNTIME
+
 # Environment values are configured in App Hosting or Secret Manager.
 # Keep service credentials out of NEXT_PUBLIC_ variables.
